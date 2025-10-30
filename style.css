@@ -21,12 +21,12 @@ body {
 
 .item {
     background-color: red;
-    border: 2px solid grey;
     border-radius: 1em;
     height: 250px;
     width: 250px;
 }
 
 .score-box {
-    padding: 3em;
+    padding-bottom: 2em;
+    font-size: 1.2em;
 }

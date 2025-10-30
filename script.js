@@ -45,6 +45,8 @@ function stopGame() {
 restartButton.addEventListener('click', () => {
     roundTimer = 30;
     countDown.textContent = roundTimer;
+    score.textContent = 0
+    scoreCount = 0
     showRestart();
     boxInterval = setInterval(changeColor, 1000);
 });

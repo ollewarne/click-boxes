@@ -30,3 +30,19 @@ body {
     padding-bottom: 2em;
     font-size: 1.2em;
 }
+
+#start-button {
+    position: absolute;
+    justify-items: center;
+    align-self: center;
+    width: 300px;
+    height: 180px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 40em;
+}
+
+.time-keeper {
+    font-size: 1.5em;
+    padding: 2em;
+}

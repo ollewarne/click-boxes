@@ -2,10 +2,10 @@ const score = document.getElementById("score");
 const countDown = document.getElementById("timer");
 const grid = document.getElementById("grid");
 const startButton = document.getElementById("start-button");
+const restartButton = document.querySelector(".restart");
 let scoreCount = 0;
 let roundTimer = 30;
 let boxInterval;
-
 
 grid.addEventListener('click', function handleEvent(event) {
     if (event.target.classList.contains("item")) {
@@ -37,6 +37,18 @@ function changeBackColor(element) {
 }
 
 function stopGame() {
+    setTimeout(showRestart, 1000)
     clearInterval(boxInterval);
     grid.removeEventListener(handleEvent);
+}
+
+restartButton.addEventListener('click', () => {
+    roundTimer = 30;
+    countDown.textContent = roundTimer;
+    showRestart();
+    boxInterval = setInterval(changeColor, 1000);
+});
+
+function showRestart() {
+    restartButton.classList.toggle("hidden");
 }
